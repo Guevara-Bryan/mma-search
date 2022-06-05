@@ -4,8 +4,7 @@ import axios from "axios";
 
 const Search = ({data, dataModifiers}) => {
     const endpoint = "http://159.203.11.232:8080/query";
-    // const endpoint = "https://cs172-test.free.beeceptor.com/query";
-    // const endpoint = "http://localhost:8080/query";
+
     const [query, setQuery] = useState("");
     const [count, setCount] = useState(5);
 
@@ -33,9 +32,9 @@ const Search = ({data, dataModifiers}) => {
             count: count
         })
         .then(res => {
-            console.log(res);
-            // dataModifiers.setSearchResults(res.data.results);
-            // dataModifiers.setHasResults(true);
+            console.log(res.data);
+            dataModifiers.setSearchResults(res.data);
+            dataModifiers.setHasResults(true);
         })
         .catch(err => {
             console.log(err);
@@ -53,8 +52,8 @@ const Search = ({data, dataModifiers}) => {
 
     return (
         <div className="search">
-            <input className="page-search-count" type="text" onChange={ updateCount }/>
-            <input className="page-search-query" type="text" placeholder="Search" onChange={ updateQuery } />
+            <input className="page-search-query" type="text" placeholder="Query" onChange={ updateQuery } />
+            <input className="page-search-count" type="text" placeholder="Count" onChange={ updateCount }/>
             <button className="button-effect" onClick={ queryPostRequest }>Search</button>
         </div>
     );

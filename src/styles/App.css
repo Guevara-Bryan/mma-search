@@ -161,7 +161,7 @@
 	border: none;
 	color: white;
 	font-size: 1em;
-	margin-left: 50px;
+	margin-left: 20px;
 }
 
 .search .page-search-query {
@@ -181,7 +181,7 @@
 	border-radius: 30px;
 	font-size: x-large;
 	color: var(--text-color);
-	margin-right: 30px;
+	margin: 0px 30px;
 	padding: 0px 20px;
 }
 
