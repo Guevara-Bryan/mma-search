@@ -1,0 +1,23 @@
+.button-effect{
+    transition: transform 200ms;
+}
+.button-effect:hover{
+    font-size: 1em;
+    transform: scale(1.025);
+}
+.button-effect:active{
+    transform: scale(1);
+}
+
+
+.highlight-effect{
+    transition: background-color 200ms;
+}
+.highlight-effect:hover{
+   background-color: #DBDBDB;
+}
+
+.input-needed-effect{
+    transition: outline 300ms;
+    outline: 1px solid rgb(255, 84, 112);
+}
