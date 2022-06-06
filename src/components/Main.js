@@ -17,7 +17,9 @@ const Main = ({ data, dataModifiers}) => {
 
     const results = (
         <div className='main-content'>
-            {data.searchResults.map(page => (<PageDisplayTwo key={page.id} page={page} />))}
+            {
+                data.searchResults.length > 0 ? data.searchResults.map(page => (<PageDisplayTwo key={page.id} page={page} />)) : <h1>No results found</h1>
+            }
         </div>
     );
     

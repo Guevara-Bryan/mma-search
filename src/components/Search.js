@@ -1,5 +1,4 @@
 import "../styles/effects.css"
-import { useState } from "react";
 import axios from "axios";
 
 const Search = ({data, dataModifiers}) => {
