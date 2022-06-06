@@ -5,6 +5,9 @@ import Search from './Search';
 const Header = ({ data, dataModifiers}) => {
     const goToLandingPage = () => { 
         dataModifiers.setHasResults(false);
+        dataModifiers.setSearchQuery("");
+        dataModifiers.setSearchCount("");
+        dataModifiers.setSearchResults([]);
     }
 
     const landing = (

@@ -5,17 +5,14 @@ import axios from "axios";
 const Search = ({data, dataModifiers}) => {
     const endpoint = "http://159.203.11.232:8080/query";
 
-    const [query, setQuery] = useState("");
-    const [count, setCount] = useState(5);
-
     function checkQueryInput(){
-        if(query.length > 0){
+        if(data.searchQuery.length > 0){
             return true;
         }
         return false;
     }
     function checkCountInput(){
-        if(count > 0){
+        if(data.searchCount > 0){
             return true;
         }
         return false;
@@ -28,8 +25,8 @@ const Search = ({data, dataModifiers}) => {
         }
 
         axios.post(endpoint, {
-            query: query,
-            count: count
+            query: data.searchQuery,
+            count: data.searchCount
         })
         .then(res => {
             console.log(res.data);
@@ -43,17 +40,17 @@ const Search = ({data, dataModifiers}) => {
 
     
     function updateQuery(e){
-        setQuery(e.target.value);
+        dataModifiers.setSearchQuery(e.target.value);
     }
 
     function updateCount(e){
-        setCount(parseInt(e.target.value));
+        dataModifiers.setSearchCount(parseInt(e.target.value));
     }
 
     return (
         <div className="search">
-            <input className="page-search-query" type="text" placeholder="Query" onChange={ updateQuery } />
-            <input className="page-search-count" type="text" placeholder="Count" onChange={ updateCount }/>
+            <input className="page-search-query" type="text" defaultValue={data.searchQuery} placeholder="Query" onChange={ updateQuery } />
+            <input className="page-search-count" type="text" defaultValue={data.searchCount} placeholder="Count" onChange={ updateCount }/>
             <button className="button-effect" onClick={ queryPostRequest }>Search</button>
         </div>
     );
