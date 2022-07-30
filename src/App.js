@@ -27,7 +27,7 @@ function App() {
 
     useEffect(() => {
         
-        axios.post("http://159.203.11.232:8080/query", {query:`${getRandomQuery()}`, count:3})
+        axios.post(process.env.REACT_APP_ENDPOINT, {query:`${getRandomQuery()}`, count:3})
         .then(res => {
             setLandingClips(res.data);
         }).catch(err => {

@@ -2,7 +2,7 @@ import "../styles/effects.css"
 import axios from "axios";
 
 const Search = ({data, dataModifiers}) => {
-    const endpoint = "http://159.203.11.232:8080/query";
+    const endpoint = process.env.REACT_APP_ENDPOINT;
 
     function checkQueryInput(){
         if(data.searchQuery.length > 0){
