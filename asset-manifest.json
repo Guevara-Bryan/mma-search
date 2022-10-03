@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mma-search/static/css/main.5388b423.css",
+    "main.js": "/mma-search/static/js/main.467170f4.js",
+    "static/js/787.d77cacf4.chunk.js": "/mma-search/static/js/787.d77cacf4.chunk.js",
+    "static/media/logo.png": "/mma-search/static/media/logo.2b8a7632b4a46277a3ff.png",
+    "index.html": "/mma-search/index.html",
+    "main.5388b423.css.map": "/mma-search/static/css/main.5388b423.css.map",
+    "main.467170f4.js.map": "/mma-search/static/js/main.467170f4.js.map",
+    "787.d77cacf4.chunk.js.map": "/mma-search/static/js/787.d77cacf4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5388b423.css",
+    "static/js/main.467170f4.js"
+  ]
+}
